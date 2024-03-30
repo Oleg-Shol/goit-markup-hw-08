@@ -12,22 +12,40 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/2.0.0/modern-normalize.min.css"
     />
-    <link rel="stylesheet" href="./dist/css/main.min.css">
+    <link rel="stylesheet" href="./dist/css/main.min.css" />
     <link rel="stylesheet" href="./css/common.css" />
     <link rel="stylesheet" href="./css/styles.css" />
   </head>
 
   <body>
     <!-- Шапка сайта -->
-    <header>
-      <div class="header container flex">
+    <!-- mobile-header -->
+    <header class="head-line ">
+      <nav class="header header-mobile container">
+        <a class="header-logo link" href="./index.html" lang="en"
+          ><span class="logo-blue">Web</span>Studio</a
+        >
+
+        <button class="menu-button" type="button" data-menu-button>
+          <svg class="mobile-button-pct">
+            <use class="mobile-lines" href="./Images/svg-icons/symbol-defs.svg#icon-menu-lines"></use>
+            <!-- <use class="mobile-cross" href="./images/svg-icons/sprite.svg#menu_cross"></use> -->
+          </svg>
+        </button>
+      </nav>
+
+      <!-- desktop-header -->
+     <dev class="header-desktop container">
+      <div class="header  flex">
         <!-- Navigations -->
 
         <nav class="flex">
           <a href="/" class="header-logo link"><span class="logo-blue">Web</span>Studio</a>
           <ul class="menu-nav list flex">
             <li class="item"><a href="" class="link current">Studio</a></li>
-            <li class="item"><a href="./portfolio.html" class="link" target="_blank">Portfolio</a></li>
+            <li class="item">
+              <a href="./portfolio.html" class="link" target="_blank">Portfolio</a>
+            </li>
             <li class="item"><a href="" class="link">Contacts</a></li>
           </ul>
         </nav>
@@ -53,6 +71,7 @@
           </li>
         </ul>
       </div>
+     </dev>
     </header>
 
     <main>
@@ -395,7 +414,9 @@
       <section class="clients section">
         <div class="container">
           <h2 class="section-title">Regular clients</h2>
-          <ul class="list flex">
+
+          <!-- add flex to ul -->
+          <ul class="list ">
             <li class="li-item">
               <a href="">
                 <div class="clients-box">
@@ -482,7 +503,7 @@
           <ul class="list flex">
             <li class="join-list">
               <a href="">
-                <button class=" foot-btn">
+                <button class="foot-btn">
                   <svg class="button-icon" width="20px" height="20px">
                     <use href="./Images/svg-icons/symbol-defs.svg#icon-instagram"></use>
                   </svg>
@@ -491,7 +512,7 @@
             </li>
             <li>
               <a href="">
-                <button class=" foot-btn">
+                <button class="foot-btn">
                   <svg class="button-icon" width="20px" height="20px">
                     <use href="./Images/svg-icons/symbol-defs.svg#icon-twitter"></use>
                   </svg>
@@ -500,7 +521,7 @@
             </li>
             <li>
               <a href="">
-                <button class=" foot-btn">
+                <button class="foot-btn">
                   <svg class="button-icon" width="20px" height="20px">
                     <use href="./Images/svg-icons/symbol-defs.svg#icon-facebook"></use>
                   </svg>
@@ -509,7 +530,7 @@
             </li>
             <li>
               <a href="">
-                <button class=" foot-btn">
+                <button class="foot-btn">
                   <svg class="button-icon" width="20px" height="20px">
                     <use href="./Images/svg-icons/symbol-defs.svg#icon-linkedin"></use>
                   </svg>

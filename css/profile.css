@@ -13,7 +13,12 @@ img {
   height: auto;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   color: #212121;
   margin: 0;
   padding: 0;
@@ -34,11 +39,26 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .container {
-  width: 1200px;
+  width: auto;
   padding-left: 15px;
   padding-right: 15px;
   margin-left: auto;
   margin-right: auto;
+}
+@media screen and (min-width: 480px) {
+  .container {
+    width: 480px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .container {
+    width: 768px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .container {
+    width: 1200px;
+  }
 }
 
 .section {
@@ -67,20 +87,87 @@ h1, h2, h3, h4, h5, h6 {
   color: #ffffff;
 }
 
+.head-line {
+  border-bottom: 1px solid #ececec;
+}
+
+.header {
+  padding-top: 16px;
+  padding-bottom: 16px;
+}
+@media screen and (min-width: 768px), (min-width: 1200px) {
+  .header {
+    padding-top: 25px;
+    padding-bottom: 25px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .header-mobile {
+    display: flex;
+    align-items: center;
+  }
+}
+@media screen and (min-width: 768px), (min-width: 1200px) {
+  .header-mobile {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .menu-button,
+  .mobile-button-pct {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+.menu-button {
+  margin-left: auto;
+  padding: 0;
+  position: relative;
+  background-color: #ffffff;
+  border: none;
+}
+@media screen and (max-width: 768px) {
+  .menu-button .mobile-button-pct {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  .menu-button .mobile-button-pct:hover, .menu-button .mobile-button-pct:focus {
+    fill: #2196f3;
+  }
+}
+
 .header-logo {
   color: #000000;
-  font-family: Raleway, sans-serif;
+  font-family: "Raleway", sans-serif;
   font-weight: 700;
-  font-size: 26px;
-  line-height: 1.19;
   letter-spacing: 0.03em;
-  margin-right: 91px;
-  padding-top: 24px;
-  padding-bottom: 25px;
+}
+@media screen and (max-width: 1199px) {
+  .header-logo {
+    font-size: 24px;
+    line-height: 1.17;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .header-logo {
+    font-size: 26px;
+    line-height: 1.19;
+  }
 }
 
 .logo-blue {
   color: #2196f3;
+}
+
+@media screen and (max-width: 767px) {
+  .header-desktop {
+    display: none;
+  }
 }
 
 .menu-nav .link {

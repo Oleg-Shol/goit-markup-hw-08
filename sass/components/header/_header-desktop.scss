@@ -1,0 +1,5 @@
+.header-desktop {
+    @media screen and (max-width: $tablet-1) {
+      display: none;
+    }
+  }
