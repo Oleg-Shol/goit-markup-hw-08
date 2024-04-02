@@ -1,9 +1,16 @@
 .contacts-nav {
-margin-left: auto;
+  @media screen and (min-width: $tablet), (min-width: $desktop) {
+    margin-left: auto;
+  }
 
+  @media screen and (min-width: $tablet) and (max-width: $desktop-1) {
+    margin-left: 84px;
+  }
 
   li:not(:first-child) {
-    margin-left: 50px;
+    @media screen and (min-width: $desktop) {
+      margin-left: 50px;
+    }
   }
 
   .link {
@@ -11,8 +18,6 @@ margin-left: auto;
     font-weight: 500;
     line-height: 1.14;
     letter-spacing: 0.02em;
-    padding-top: 24px;
-    padding-bottom: 25px;
 
     @include transition(color);
 
@@ -27,11 +32,25 @@ margin-left: auto;
       fill: #757575;
       margin-right: 10px;
 
+      
+    @media screen and (min-width: $tablet) and (max-width: $desktop-1) {
+      width: 14px;
+      height: 14px;
+      margin-right: 8px;
+    }
+
       @include transition(color);
     }
     &:hover .contacts-icon,
     &:focus .contacts-icon {
       fill: $hover-color;
     }
+  }
+}
+
+.contacts-nav.flex {
+  @media screen and (min-width: $tablet) and (max-width: $desktop-1) {
+    display: block;
+    justify-content: flex-start;
   }
 }

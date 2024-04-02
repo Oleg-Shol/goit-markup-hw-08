@@ -39,7 +39,7 @@ h6 {
 }
 
 .container {
-  width: auto;
+  width: 100%;
   padding-left: 15px;
   padding-right: 15px;
   margin-left: auto;
@@ -91,17 +91,6 @@ h6 {
   border-bottom: 1px solid #ececec;
 }
 
-.header {
-  padding-top: 16px;
-  padding-bottom: 16px;
-}
-@media screen and (min-width: 768px), (min-width: 1200px) {
-  .header {
-    padding-top: 25px;
-    padding-bottom: 25px;
-  }
-}
-
 @media screen and (max-width: 767px) {
   .header-mobile {
     display: flex;
@@ -117,8 +106,8 @@ h6 {
 @media screen and (max-width: 768px) {
   .menu-button,
   .mobile-button-pct {
-    width: 40px;
-    height: 40px;
+    width: 24px;
+    height: 16px;
   }
 }
 
@@ -138,6 +127,34 @@ h6 {
   }
   .menu-button .mobile-button-pct:hover, .menu-button .mobile-button-pct:focus {
     fill: #2196f3;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .header-desktop {
+    display: none;
+  }
+}
+@media screen and (min-width: 768px), (min-width: 1200px) {
+  .header-desktop {
+    display: block;
+  }
+}
+
+.header {
+  padding-top: 16px;
+  padding-bottom: 16px;
+}
+@media screen and (min-width: 768px), (min-width: 1200px) {
+  .header {
+    padding-top: 25px;
+    padding-bottom: 25px;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .header-desktop .mail {
+    margin-bottom: 10px;
   }
 }
 
@@ -164,19 +181,11 @@ h6 {
   color: #2196f3;
 }
 
-@media screen and (max-width: 767px) {
-  .header-desktop {
-    display: none;
-  }
-}
-
 .menu-nav .link {
   color: #212121;
   font-weight: 500;
   line-height: 1.14;
   letter-spacing: 0.02em;
-  padding-top: 24px;
-  padding-bottom: 25px;
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .menu-nav .link:hover, .menu-nav .link:focus {
@@ -187,32 +196,61 @@ h6 {
   position: relative;
 }
 .menu-nav .link.current::after {
-  position: absolute;
   content: "";
   width: 100%;
   height: 4px;
   border-radius: 2px;
   background-color: #2196f3;
-  bottom: -6.5px;
+  position: absolute;
+  bottom: -31px;
   left: 0;
 }
-.menu-nav .item:not(:first-child) {
-  margin-left: 50px;
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .menu-nav .link.current::after {
+    bottom: -35px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .menu-nav .link.current::after {
+    bottom: -30.5px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .menu-nav {
+    margin-left: 88px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .menu-nav {
+    margin-left: 93px;
+  }
+}
+@media screen and (min-width: 768px), (min-width: 1200px) {
+  .menu-nav .item + .item {
+    margin-left: 50px;
+  }
 }
 
-.contacts-nav {
-  margin-left: auto;
+@media screen and (min-width: 768px), (min-width: 1200px) {
+  .contacts-nav {
+    margin-left: auto;
+  }
 }
-.contacts-nav li:not(:first-child) {
-  margin-left: 50px;
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .contacts-nav {
+    margin-left: 84px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .contacts-nav li:not(:first-child) {
+    margin-left: 50px;
+  }
 }
 .contacts-nav .link {
   color: #757575;
   font-weight: 500;
   line-height: 1.14;
   letter-spacing: 0.02em;
-  padding-top: 24px;
-  padding-bottom: 25px;
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .contacts-nav .link:hover, .contacts-nav .link:focus {
@@ -225,8 +263,22 @@ h6 {
   margin-right: 10px;
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .contacts-nav .link .contacts-icon {
+    width: 14px;
+    height: 14px;
+    margin-right: 8px;
+  }
+}
 .contacts-nav .link:hover .contacts-icon, .contacts-nav .link:focus .contacts-icon {
   fill: #2196f3;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .contacts-nav.flex {
+    display: block;
+    justify-content: flex-start;
+  }
 }
 
 .portfolio-filter {
